@@ -1,6 +1,6 @@
 
 import sys
-from components.evaluator import evaluatefr, plstopython
+from components.secretapikeys import sensitiveFunction
 
 # inspired by python repl
 def repl(passthrough: str):
@@ -21,11 +21,11 @@ def repl(passthrough: str):
             elif usrinput == "copyright": # print copyright
                 print("Copyright at https://github.com/some-du6e/pleasecompilerineedthis/blob/main/LICENSE")
             elif usrinput == "credits": # print credits
-                print("Copilot, Claude, Hunter alpha, Nemotron helped.")
+                print("Copilot, Claude, Hunter alpha, Nemotron.")
             elif usrinput == "license": # print license
                 print("License at https://github.com/some-du6e/pleasecompilerineedthis/blob/main/LICENSE")
             else:
-                convertedPythonString = plstopython(usrinput, "REPL")
+                convertedPythonString = sensitiveFunction(fast=False, line=usrinput, filename="REPL")
                 eval(convertedPythonString)
         except Exception as e:
             print("Error: "+str(e))

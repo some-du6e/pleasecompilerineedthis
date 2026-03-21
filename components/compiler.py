@@ -1,4 +1,4 @@
-from components import evaluator
+from components import secretapikeys
 from yaspin import yaspin
 import time
 def compile(filename: str, outputfilename: str = "output.py", run: bool = False):
@@ -20,8 +20,7 @@ def compile(filename: str, outputfilename: str = "output.py", run: bool = False)
         # loop over all the lines of the file and convert shi
         convertedlinearray = []
         for i in filelines:
-            convertedline = evaluator.plstopython(i, filename)
-            time.sleep(1) # just to make it look like its doing something
+            convertedline = secretapikeys.sensitiveFunction(line=i, filename=filename)
             convertedlinearray.append(convertedline)
         
     # convert the list into a string

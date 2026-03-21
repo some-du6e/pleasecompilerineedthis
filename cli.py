@@ -18,6 +18,7 @@ def cli(repl: bool, c: str, o: str, run: bool, repl_passthrough: str):
         print("U need to specify a file to compile if you want to specify an output file")
     if c:
         compilefr.compile(c, o, run)
+        return
     if repl:
         repl_loop(repl_passthrough)
 if __name__ == '__main__':

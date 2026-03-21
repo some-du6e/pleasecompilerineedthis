@@ -1,2 +1,2 @@
-name = input("Name please: ")
+print(Exception('No thanks'))
 print("Hello, " + name + "!")

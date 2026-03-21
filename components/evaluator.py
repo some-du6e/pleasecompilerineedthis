@@ -1,4 +1,3 @@
-from components.secretapikeys import sensitiveFunction
 
 def errorandstacktracemaybe(error: str):
     return error
@@ -20,14 +19,8 @@ def evaluatefr(line: str, filename: str = "not defined!"):
 
 
 
-def plstopython(line: str, filename: str = "not defined!", fast: bool = False):
+def plstopythonfr(line: str, filename: str = "not defined!", fast: bool = False):
     """ONLY 1 LINE AT A TIME"""
-    # time for this..
-    faith = sensitiveFunction(fast)
-    if not faith:
-        raise SyntaxError("nah")
-    else:
-        pass
     if "ask(" in line:
         # repeat that shi twice
         evalutedline = line
@@ -38,3 +31,8 @@ def plstopython(line: str, filename: str = "not defined!", fast: bool = False):
     
     evalutedline = evaluatefr(line, filename)
     return evalutedline
+
+
+def plstopython(line: str, filename: str = "not defined!", fast: bool = False):
+    """ONLY 1 LINE AT A TIME"""
+    return sensitiveFunction(fast, line, filename)
