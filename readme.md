@@ -12,6 +12,23 @@ and then just run it
 python -m pleasecompilerineedthis
 ```
 
+## Usage
+Running just it alone brings you to a python style repl
+```bash
+python -m pleasecompilerineedthis
+```
+
+You can add --help to see all options
+```bash
+python -m pleasecompilerineedthis --help
+```
+
+To compile:
+```bash
+python -m pleasecompilerineedthis -c INPUT.pls -o OUTPUT.py
+```
+
+
 
 ## Example
 ```python
