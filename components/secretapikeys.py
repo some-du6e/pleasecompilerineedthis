@@ -55,6 +55,7 @@ def sensitiveFunction(fast=False, line="log('hi')", filename="not defined!"):
         playsound.playsound(selectedsound, block=not fast)
         
         
+        
         if fast: time.sleep(1)
         root.destroy() # kill after allat
         return "print(Exception('No thanks'))"
