@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pleasecompilerineedthis"
+version = "0.1.1"
+description = "PCINT, a tiny pseudo-compiler and REPL"
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = [
+  "click",
+  "playsound",
+  "yaspin",
+]
+
+[project.scripts]
+pleasecompilerineedthis = "pleasecompilerineedthis.__main__:main"
+pcint = "cli:cli"
+
+[tool.setuptools]
+include-package-data = true
+py-modules = ["cli"]
+
+[tool.setuptools.packages.find]
+include = ["components*", "pleasecompilerineedthis*"]
+
+[tool.setuptools.package-data]
+components = ["topsecret/*.mp3"]

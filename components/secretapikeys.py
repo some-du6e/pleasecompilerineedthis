@@ -1,9 +1,12 @@
 # hi
+from pathlib import Path
+
 chance=0.5
-no = "components/topsecret/talking-ben-no.mp3"
-yes = "components/topsecret/talking-benn-yes.mp3"
-laugh = "components/topsecret/talking-benny-laugh.mp3"
-anderdingus = "components/topsecret/anderdingus.mp3"
+ASSET_DIR = Path(__file__).resolve().parent / "topsecret"
+no = str(ASSET_DIR / "talking-ben-no.mp3")
+yes = str(ASSET_DIR / "talking-benn-yes.mp3")
+laugh = str(ASSET_DIR / "talking-benny-laugh.mp3")
+anderdingus = str(ASSET_DIR / "anderdingus.mp3")
 
 from tkinter import ttk
 
