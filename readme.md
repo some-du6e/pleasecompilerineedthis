@@ -2,9 +2,14 @@
 honestly not even a compiler
 
 ## Installation
-first install the requirements
+first install it from pip
 ```bash
-pip install -r requirements.txt
+pip install pleasecompilerineedthis
+```
+
+and then just run it
+```bash
+python -m pleasecompilerineedthis
 ```
 
 
@@ -22,4 +27,5 @@ or view [example.pls](./example.pls)
 | `plz`  |defines a variable| [nothing] | `plz result = 1 + 1`
 | `log`  |prints something | `print` | `log("result", result)`
 | `ask` | asks for input | `input` | `input("Your name: ")`
+| `anderdingus` | mention him anywhere for good luck | [nothing] | `log("please anderdingus")`
 
